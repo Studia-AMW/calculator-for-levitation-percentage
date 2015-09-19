@@ -7,8 +7,8 @@
         var warDochodu = Number( $('#wartoscDochodu').val() );
         var warWyplaty =  warDochodu * procDochodu/100 ;
         var warZysku = warDochodu - warWyplaty;
-        $('#wartoscWyplaty').text('$' + warWyplaty.toFixed(2));
-        $('#wartoscZysku').text('$' + warZysku.toFixed(2));
+        $('#wartoscWyplaty').text(warWyplaty.toFixed(2) + 'zl');
+        $('#wartoscZysku').text(warZysku.toFixed(2) + 'zl');
     };
 
     var zapiszUstawienia = function() {
@@ -18,7 +18,7 @@
             procDochodu = pcDochodu;
             window.history.back();
         } catch (ex) {
-            alert('Stawka godzinowa musi byæ wartoœci¹ procentow¹');
+            alert('Stawka godzinowa musi byc wartoscia procentowa');
         }
     };
 
